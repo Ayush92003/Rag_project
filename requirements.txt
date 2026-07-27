@@ -35,3 +35,6 @@ requests
 # Optional (better performance)
 sentence-transformers>=5.0.0
 langchain-docling
+streamlit
+dockling
+opencv-python-headless
