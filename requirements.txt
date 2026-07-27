@@ -1,0 +1,36 @@
+# Core LangChain
+langchain
+langchain-core
+langchain-community
+
+# OpenAI
+langchain-openai
+openai
+
+# Mistral AI
+langchain-mistralai
+mistralai
+
+# Vector Database
+chromadb
+
+# Embeddings & Tokenization
+tiktoken
+
+# Document Loaders
+pypdf
+python-docx
+beautifulsoup4
+lxml
+
+# Text Splitting
+nltk
+
+# Environment Variables
+python-dotenv
+
+# Utilities
+requests
+
+# Optional (better performance)
+sentence-transformers>=5.0.0

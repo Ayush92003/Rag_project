@@ -1,0 +1,639 @@
+Complete Generative AI (GenAI) Notes
+
+Interview + Placement + Project + LLM Development Notes
+
+1. What is Artificial Intelligence (AI)?
+
+Artificial Intelligence is the field of making machines perform tasks that normally require human intelligence.
+
+Examples:
+
+Face Recognition
+Self Driving Cars
+Chatbots
+Recommendation Systems
+
+AI is an umbrella term.
+
+Artificial Intelligence
+        |
+        +---- Machine Learning
+                    |
+                    +---- Deep Learning
+                              |
+                              +---- Generative AI
+2. Machine Learning (ML)
+
+Machine Learning allows computers to learn patterns from data instead of explicitly programming every rule.
+
+Example
+
+Instead of writing:
+
+if email contains "win money"
+    spam
+
+We provide thousands of spam and non-spam emails.
+
+The model learns patterns automatically.
+
+Types
+Supervised Learning
+
+Data has labels.
+
+Example
+
+Image → Cat
+
+Image → Dog
+
+Algorithms
+
+Linear Regression
+Logistic Regression
+Decision Trees
+Random Forest
+SVM
+Unsupervised Learning
+
+No labels.
+
+Goal:
+Find hidden patterns.
+
+Example
+
+Customer Segmentation
+
+Algorithms
+
+K Means
+DBSCAN
+PCA
+Reinforcement Learning
+
+Agent learns by reward and punishment.
+
+Example
+
+Chess
+
+Robot Navigation
+
+Games
+
+3. Deep Learning
+
+Subset of ML.
+
+Uses Neural Networks with many layers.
+
+Applications
+
+NLP
+Computer Vision
+Speech Recognition
+Autonomous Cars
+
+Frameworks
+
+TensorFlow
+PyTorch
+Keras
+4. What is Generative AI?
+
+Generative AI generates new content.
+
+Instead of only predicting,
+
+it creates
+
+Text
+Images
+Videos
+Music
+Code
+
+Examples
+
+ChatGPT
+
+Claude
+
+Gemini
+
+GitHub Copilot
+
+Midjourney
+
+Runway
+
+5. Types of Generative AI Models
+Large Language Models (LLMs)
+
+Generate text.
+
+Examples
+
+GPT
+Llama
+Mistral
+Claude
+Gemini
+DeepSeek
+Diffusion Models
+
+Generate images.
+
+Examples
+
+Stable Diffusion
+DALL-E
+Midjourney
+GANs
+
+Generative Adversarial Networks
+
+Generator vs Discriminator
+
+Used in
+
+Face Generation
+Image Enhancement
+VAEs
+
+Variational Auto Encoders
+
+Used for
+
+Image Compression
+Data Generation
+6. Large Language Models (LLMs)
+
+LLMs are Deep Learning models trained on huge text datasets.
+
+They learn
+
+Grammar
+Facts
+Coding
+Reasoning patterns
+
+Examples
+
+GPT-5.5
+
+Gemini
+
+Claude
+
+Llama
+
+Mistral
+
+7. How LLM Works
+Books
+
+Websites
+
+Wikipedia
+
+Code
+
+Research Papers
+      |
+      |
+ Tokenization
+      |
+ Transformer
+      |
+ Prediction
+      |
+ Next Token
+
+LLM predicts one token at a time.
+
+Example
+
+Input
+
+India is the capital of
+
+Prediction
+
+New ❌
+
+Delhi ✅
+
+Actually prediction is
+
+India
+↓
+
+is
+↓
+
+the
+
+↓
+
+capital
+
+↓
+
+of
+
+↓
+
+Delhi
+
+One token at a time.
+
+8. Token
+
+A token is the smallest unit processed by an LLM.
+
+Sentence
+
+I love ChatGPT
+
+may become
+
+"I"
+
+" love"
+
+" Chat"
+
+"GPT"
+
+Not always equal to words.
+
+Approximation
+
+100 words ≈ 130 tokens
+9. Context Window
+
+Maximum number of tokens the model can remember during one conversation.
+
+Example
+
+8K Tokens
+
+32K Tokens
+
+128K Tokens
+
+1M Tokens
+
+Larger context
+
+↓
+
+Better memory
+
+↓
+
+Long documents
+
+↓
+
+Better conversations
+
+10. Parameters
+
+Parameters are numbers learned during training.
+
+Examples
+
+7 Billion
+
+13 Billion
+
+70 Billion
+
+405 Billion
+
+More parameters generally improve capability, but architecture, data quality, and training also matter.
+
+11. Temperature
+
+Controls randomness.
+
+0.0
+
+↓
+
+Very deterministic
+
+↓
+
+Same answer every time
+2.0
+
+↓
+
+Highly creative
+
+↓
+
+Random responses
+
+Typical
+
+0.2
+
+Coding
+
+0.7
+
+General Chat
+
+1.0+
+
+Creative Writing
+12. Top-K Sampling
+
+Choose next word from top K probable words.
+
+Example
+
+Top 5 words
+
+↓
+
+Choose one
+
+K controls diversity.
+
+13. Top-P Sampling
+
+Choose smallest group whose cumulative probability ≥ P.
+
+Usually better than Top-K.
+
+14. Prompt
+
+Input given to an LLM.
+
+Example
+
+Explain Java OOP.
+15. Prompt Engineering
+
+Writing better prompts to obtain better results.
+
+Good prompt includes:
+
+Role
+Task
+Context
+Constraints
+Output format
+
+Example
+
+You are a Java expert.
+
+Explain JVM.
+
+Give examples.
+
+Maximum 200 words.
+16. System Prompt
+
+Highest priority instruction.
+
+Example
+
+You are a helpful coding assistant.
+17. User Prompt
+
+Instruction from the user.
+
+Example
+
+Write Python code.
+18. Assistant Message
+
+Model's response.
+
+19. Zero Shot Prompting
+
+No example given.
+
+Translate
+
+Hello
+20. One Shot Prompting
+
+One example.
+
+Dog -> Animal
+
+Cat ->
+21. Few Shot Prompting
+
+Multiple examples.
+
+Improves consistency.
+
+22. Chain of Thought (CoT)
+
+Breaks reasoning into intermediate steps before producing an answer.
+
+Useful for math and logic tasks.
+
+23. Embeddings
+
+Embeddings convert text into vectors (lists of numbers) that capture semantic meaning.
+
+Example
+
+"Cat"
+
+↓
+
+[0.31, -0.44, 0.91, ...]
+
+Similar meanings have similar vectors.
+
+24. Vector Database
+
+Stores embeddings.
+
+Popular databases
+
+Pinecone
+ChromaDB
+FAISS
+Milvus
+Weaviate
+Qdrant
+25. Semantic Search
+
+Search by meaning rather than exact keywords.
+
+Example
+
+Query
+
+Cheap phone
+
+Returns
+
+Affordable smartphone
+
+even if the exact words differ.
+
+26. RAG (Retrieval-Augmented Generation)
+
+RAG combines an LLM with external knowledge.
+
+Flow
+
+User Question
+
+↓
+
+Embedding
+
+↓
+
+Vector Search
+
+↓
+
+Relevant Documents
+
+↓
+
+LLM
+
+↓
+
+Answer
+
+Benefits
+
+More accurate
+Up-to-date information
+Reduces hallucinations
+Uses private documents
+27. Fine Tuning
+
+Retraining a model on specialised data.
+
+Example
+
+Train GPT for
+
+Medical
+Legal
+Finance
+28. Hallucination
+
+LLM generates incorrect or fabricated information while sounding confident.
+
+Solutions
+
+RAG
+Better prompting
+Verification
+Fine-tuning (for suitable use cases)
+29. AI Agents
+
+Agents can
+
+Think
+Plan
+Use tools
+Remember
+Execute tasks
+
+Example
+
+Question
+
+↓
+
+Search Tool
+
+↓
+
+Calculator
+
+↓
+
+Database
+
+↓
+
+Answer
+
+Frameworks
+
+LangChain
+LangGraph
+CrewAI
+AutoGen
+30. LangChain
+
+Framework for building LLM applications.
+
+Components
+
+Prompt Templates
+Models
+Output Parsers
+Chains
+Memory
+Tools
+Agents
+Retrieval
+Vector Stores
+31. LangGraph
+
+Framework for creating stateful, graph-based AI agents.
+
+Supports
+
+Multi-step workflows
+Loops
+Branching
+Human-in-the-loop
+32. MCP (Model Context Protocol)
+
+A standard that allows LLMs to connect with external tools, data sources, and applications through a common interface.
+
+Benefits
+
+Tool interoperability
+Easier integrations
+Consistent communication between models and services
+33. AI Agent vs RAG
+RAG	Agent
+Retrieves documents	Makes decisions
+Answers questions	Performs actions
+Search-focused	Workflow-focused
+No planning	Can plan
+Mostly read-only	Can call tools/APIs
+34. Popular APIs
+OpenAI API
+Anthropic API
+Google Gemini API
+Mistral API
+Groq API
+Hugging Face Inference API
+35. Common GenAI Tech Stack
+Python
+LangChain
+LangGraph
+FastAPI
+Streamlit
+Gradio
+FAISS/ChromaDB/Pinecone
+OpenAI, Gemini, Claude, Mistral or Llama models
+Docker
+Git/GitHub
